@@ -1,0 +1,29 @@
+{
+  "name": "foodde",
+  "version": "1.0.0",
+  "description": "A Food Delivery web app",
+  "keywords": [
+    "FoodDe"
+  ],
+  "homepage": "https://github.com/AnirudhaDoesCoolStuff/FoodDe#readme",
+  "bugs": {
+    "url": "https://github.com/AnirudhaDoesCoolStuff/FoodDe/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnirudhaDoesCoolStuff/FoodDe.git"
+  },
+  "license": "ISC",
+  "author": "Anirudha Havaldar",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  }
+}
