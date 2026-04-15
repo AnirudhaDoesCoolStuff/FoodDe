@@ -1,11 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement(
-  "h1",
-  { id: 123, namey: "abc" },
-  "Hello world from React!",
+const elem = <p>I am paragraph tag </p>;
+const Title = (
+  <div>
+    {elem}
+    <h1> Zwiggyyyyyy </h1>
+  </div>
 );
 
+const Menu = () => {
+  return (
+    <div>
+      {Title}
+      <ul>
+        <li> Dosa </li>
+        <li> Idli </li>
+        <li> Poori </li>
+      </ul>
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(<Menu />);
