@@ -225,3 +225,24 @@ root.render(<Menu />);
 - JSX helps a little bit by preventing malicious attack
 
 - We can write the component `<Title></Title>`
+
+Episode #4: Talk is cheap, show me the code!
+
+- Plan the mock/wireframe first and then only code.
+
+Basic Wireframe
+
+```
+- Header
+  - Logo
+  - Nav-items
+- Body
+  - Search
+  - Restaurant Container
+    - RestoCard
+- Footer
+  - Copyright
+  - Links
+  - Address
+  - Contact
+```

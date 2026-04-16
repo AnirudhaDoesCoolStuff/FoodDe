@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+
+.app {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 200px;
+}
+
+.header {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid black; */
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.nav-items > ul {
+  display: flex;
+}
+
+.nav-items > ul > li {
+  list-style-type: none;
+  padding: 10px;
+  margin-right: 50px;
+}
