@@ -246,3 +246,11 @@ Basic Wireframe
   - Address
   - Contact
 ```
+
+- If we have to provide inline style, we need to get into js mode and then pass the jsobject
+
+```
+<ResCard style={{backgroundColor: "grey"}} />
+```
+
+- config driven UI: UI driven by the data.
