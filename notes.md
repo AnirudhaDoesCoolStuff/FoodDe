@@ -254,3 +254,56 @@ Basic Wireframe
 ```
 
 - config driven UI: UI driven by the data.
+
+Episode #5: Let's get hooked.
+
+Imports and exports
+
+## Import it
+
+```js
+import { add, sub } from "./utils";
+```
+
+👉 Must use **same names**
+
+---
+
+# 2. Default Export
+
+You export **one main thing**
+
+```js
+// file: App.js
+export default App;
+```
+
+---
+
+## Import it
+
+```js
+import App from "./App";
+```
+
+👉 Name can be anything:
+
+```js
+import MyApp from "./App"; // still works
+```
+
+---
+
+# 🔥 Key difference (this is the real memory)
+
+| Type    | How many | Naming         |
+| ------- | -------- | -------------- |
+| named   | many     | must match     |
+| default | one      | you can rename |
+
+---
+
+Hooks
+
+- Whenever a state variable updates, react renders the component
+- useState: We are basically doing array destructing!

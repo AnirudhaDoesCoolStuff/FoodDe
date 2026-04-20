@@ -1,17 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import logo from "url:./images/logo.png";
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Body />
-    </div>
-  );
-};
-
-const resObj = {
+export const resObj = {
   status: true,
   message: "Restaurant List fetched successfully",
   data: {
@@ -34,8 +21,8 @@ const resObj = {
                         areaName: "Central District",
                         costForTwo: "₹400 for two",
                         cuisines: ["Pizza", "Italian", "Fast Food"],
-                        avgRating: 4.3,
-                        avgRatingString: "4.3",
+                        avgRating: 3.8,
+                        avgRatingString: "3.8",
                         totalRatingsString: "10K+ ratings",
                         veg: false,
                         sla: {
@@ -108,8 +95,8 @@ const resObj = {
                         areaName: "City Center",
                         costForTwo: "₹500 for two",
                         cuisines: ["Indian", "North Indian", "Biryani"],
-                        avgRating: 4.2,
-                        avgRatingString: "4.2",
+                        avgRating: 3.9,
+                        avgRatingString: "3.9",
                         totalRatingsString: "12K+ ratings",
                         veg: false,
                         sla: {
@@ -158,8 +145,8 @@ const resObj = {
                         areaName: "West End",
                         costForTwo: "₹200 for two",
                         cuisines: ["Desserts", "Ice Cream", "Bakery"],
-                        avgRating: 4.6,
-                        avgRatingString: "4.6",
+                        avgRating: 3.6,
+                        avgRatingString: "3.6",
                         totalRatingsString: "7K+ ratings",
                         veg: true,
                         sla: {
@@ -208,7 +195,7 @@ const resObj = {
                         areaName: "South Bangalore",
                         costForTwo: "₹300 for two",
                         cuisines: ["South Indian", "Dosa", "Idli"],
-                        avgRating: 4.5,
+                        avgRating: 3.2,
                         avgRatingString: "4.5",
                         totalRatingsString: "11K+ ratings",
                         veg: true,
@@ -233,8 +220,8 @@ const resObj = {
                         areaName: "Tech Hub",
                         costForTwo: "₹450 for two",
                         cuisines: ["Italian", "Pasta", "Continental"],
-                        avgRating: 4.1,
-                        avgRatingString: "4.1",
+                        avgRating: 3.7,
+                        avgRatingString: "3.7",
                         totalRatingsString: "6K+ ratings",
                         veg: false,
                         sla: {
@@ -258,66 +245,3 @@ const resObj = {
     },
   },
 };
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div>
-        <img src={logo} className="logo" alt="Logo" width="220" />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const Body = () => {
-  const restaurants =
-    resObj.data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
-
-  return (
-    <div className="body">
-      <div className="search">
-        <input type="text" placeholder="Search" />
-      </div>
-      <div className="restaurant-container">
-        {restaurants.map((restaurant) => {
-          return (
-            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-          );
-        })}
-      </div>
-    </div>
-  );
-};
-
-const RestaurantCard = ({ resData }) => {
-  const {
-    name,
-    cuisines,
-    avgRating,
-    sla: { deliveryTime },
-  } = resData.info;
-
-  return (
-    <div className="res-card">
-      <img
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2026/4/11/5e4633a3-c7cd-45f6-ad24-6dc6070e58c1_17301.JPG"
-        className="img-card"
-      />
-      <h4>{name}</h4>
-      <h4>{cuisines.join(", ")}</h4>
-      <h4>{avgRating}</h4>
-      <h4>{deliveryTime}</h4>
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
